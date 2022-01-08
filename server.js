@@ -1,6 +1,6 @@
 // load .env data into process.env
 require("dotenv").config();
-
+const dbhelper = require('./database.js');
 // Web server config
 const PORT = process.env.PORT || 8080;
 const sassMiddleware = require("./lib/sass-middleware");
@@ -49,8 +49,13 @@ app.use("/api/widgets", widgetsRoutes(db));
 // Separate them into separate routes files (see above).
 
 app.get("/", (req, res) => {
-  res.render("index");
+  dbhelper.menu().then((menus) => {
+  console.log(menus);
+    res.render("index", {menus});
+  })
+
 });
+
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
