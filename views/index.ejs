@@ -30,15 +30,15 @@
       </nav>
     </header>
 
-<<<<<<< HEAD
-=======
     <main>
       <section class="aboutUs">
         <h4>Where magic tasting pizza is created</h4>
       </section>
 
-      <section>
-        <h3>Menu</h3>
+      <section class= "menu">
+        <% for(const item of menus) { %>
+          <p> <%= item.description %> </p>
+      <%   } %>
       </section>
 
       <footer>
@@ -51,5 +51,4 @@
       </footer>
     </main>
   </body>
->>>>>>> 1945503573e0210e865ff451f55ca73186a5b370
 </html>
