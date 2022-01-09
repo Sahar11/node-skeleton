@@ -50,10 +50,8 @@ app.use("/api/widgets", widgetsRoutes(db));
 
 app.get("/", (req, res) => {
   dbhelper.menu().then((menus) => {
-  console.log(menus);
     res.render("index", {menus});
-  })
-
+  });
 });
 
 
