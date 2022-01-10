@@ -1,0 +1,37 @@
+header > nav > ul {
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #c28e00;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  height: 70px;
+  width: 70px;
+}
+
+.logout, header > nav > ul > li {
+  display: flex;
+}
+
+header > nav > ul > li a {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid black;
+}
+
+#cartItems{
+  margin-top: -15px;
+}
