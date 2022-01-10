@@ -10,38 +10,4 @@ main {
 }
 
 
-header > nav > ul {
-  list-style-type: none;
-  padding: 20px;
-  overflow: hidden;
-  background-color: #c28e00;
-  margin: 0;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-#logo {
-  height: 70px;
-  width: 70px;
-}
-
-.logout {
-  display: flex;
-
-}
-
-header > nav > ul > li a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid black;
-}
 

@@ -31,9 +31,17 @@
           <li><img id="logo" src="/docs/logo.png" alt="logo" /></li>
           <li ><a href="#">Menu</a></li>
           <li><a href="#">About us</a></li>
+
           <li class="logout">
-            <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+
+            <a id="cart-span"><i id="cart" class="fas fa-shopping-cart"></i>
+
+              <span id ="cartItems" class ="cart-quantity">0</span>
+
+            </a>
+
             <a href="#">Hi Rosetta</a><a href="#">Logout</a>
+
           </li>
         </ul>
       </nav>
@@ -60,7 +68,7 @@
               <div class="description">
                 <%= item.description %>
                 <p class="price"><%= item.price %></p>
-                <button type="button" class="btn btn-warning" onclick="cart('item1')">Add to Cart</button>
+                <button type="button" class="btn btn-warning" onclick="cart('1')">Add to Cart</button>
               </div>
             </section>
           </div>
