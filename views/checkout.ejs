@@ -1,15 +1,57 @@
 <%- include('partials/_header') %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
 <body>
-  <div id="checkout-container"></div>
+<!-- img for header -->
+  <section>
+ <img class="head-picture" src="/docs/head-picture.jpg" alt="pizza">
+  </section>
+
+  <div id="checkout-container">
+    <section> <div class="container menus">
+      <div class="row">
+
+        <div class="item col-sm-6">
+          <section class="menu">
+            <img class="thumbnail" src="https://images.unsplash.com/photo-1641900157649-00fc30a5dd9e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+            <div class="description">
+             description
+              <p class="price">30.00</p>
+            </div>
+          </section>
+        </div>
+        <div class="quantity">
+          <p>
+            quantity: 2
+          </p>
+        </div>
+
+      </div>
+    </div></section>
+
+    <section class="order-status">
+      <h2>Order Status</h2>
+      <p>Your Order would be ready in: 20min</p>
+      </section>
+  </div>
+
+
   <script>renderCheckout()</script>
+
+  <!-- Footer -->
+  <section class="footer">
+    <footer>
+      <div class="address">
+        <p>2022 Lighthouse Street, Toronto, Canada</p>
+        <p>416-988-2431</p>
+      </div>
+
+      <div class="icons">
+        <h4>Follow Us</h4>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </footer>
+  </section>
 </body>
 </html>
