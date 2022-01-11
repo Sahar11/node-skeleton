@@ -5,6 +5,7 @@ const dbhelper = require('./database.js');
 const PORT = process.env.PORT || 8080;
 const sassMiddleware = require("./lib/sass-middleware");
 const express = require("express");
+const bodyParser = require("body-parser");
 const app = express();
 const morgan = require("morgan");
 
@@ -21,6 +22,8 @@ app.use(morgan("dev"));
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   "/styles",
@@ -55,9 +58,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/views/checkout", (req, res) => {
-  console.log("hello");
+  // console.log("hello");
   res.render("checkout");
 
+});
+
+app.post("/views/checkout/:id", (req, res) => {
+  // console.log("hello");
+  const id = req.params.id;
+  console.log(id);
+  res.render("views/checkout", {id});
 });
 
 app.listen(PORT, () => {

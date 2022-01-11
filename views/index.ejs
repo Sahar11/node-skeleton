@@ -20,6 +20,7 @@
           <% for(const item of menus) { %>
           <div class="item col-sm-6">
             <section class="menu">
+              <!-- <form method="POST" action="<% item.id %>/checkout"></form> -->
               <img class="thumbnail" src="<%= item.thumbnail_url %>" alt="" />
               <div class="description">
                 <%= item.description %>
@@ -31,6 +32,7 @@
                   Add to Cart
                 </button>
               </div>
+              <!-- </form> -->
             </section>
           </div>
           <% } %>
