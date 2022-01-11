@@ -2,23 +2,7 @@
 // add products to cart
 const cart_czount = require('./cart_count');
 
-
-// eslint-disable-next-line func-style
-// function addToCartClicked(id) {
-//   const addToCart = document.getElementsByClassName("add-to-cart");
-//   console.log(id);
-//   for (let i = 0; i < addToCart.length; i++) {
-//     button = addToCart[i];
-//   }
-// }
-
-// eslint-disable-next-line func-style
-
-//A Function to Set a Cookie
-// eslint-disable-next-line func-style
 function addToCartClicked(id) {
-//   document.cookie = "id=" + id + ";"  + "; path=/";
-  // eslint-disable-next-line no-undef
   let cart = JSON.parse(localStorage.getItem("cart"));
 
   if (!cart) {
@@ -34,8 +18,6 @@ function addToCartClicked(id) {
   );
 }
 
-//A Function to Get a Cookie
-// eslint-disable-next-line func-style
 function getCart() {
   const cart = JSON.parse(localStorage.getItem("cart"));
   return cart;
@@ -52,5 +34,4 @@ function renderCheckout() {
     <div> productId: ${item.id} </div>
     `;
   });
-  // checkOutContainer.innerHTML;
 }
