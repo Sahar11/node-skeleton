@@ -27,7 +27,7 @@
                 <button
                   type="button"
                   class="add-to-cart btn btn-warning"
-                  onclick="addToCartClicked('<%= item.id %>')";>
+                  onclick="addToCartClicked('<%= item.id %>', '<%= item.description %>', '<%= item.thumbnail_url %>','<%= item.price %>')";>
                   Add to Cart
                 </button>
               </div>
@@ -37,7 +37,6 @@
           <% } %>
         </div>
       </div>
-
       <section class="footer">
         <footer>
           <div class="address">
