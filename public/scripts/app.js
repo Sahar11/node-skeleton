@@ -1,7 +1,5 @@
 // Client facing scripts here
 // add products to cart
-const cart_czount = require('./cart_count');
-
 // eslint-disable-next-line func-style
 function addToCartClicked(id, description, thumbnailUrl, price) {
   let cart = JSON.parse(localStorage.getItem("cart"));
@@ -69,7 +67,7 @@ function renderCheckout() {
     </div></section>
     `;
     array.push(item);
-
+    console.log(array);
   });
   totalCheckout(array);
 }
@@ -80,8 +78,9 @@ function renderCheckout() {
 function totalCheckout(array) {
   let totalAmount =  0;
   let totalItems = 0;
+  console.log(array);
   array.forEach(item => {
-
+    console.log(item);
     let price = item.price.replace('$','');
     totalItems += item.quantity;
     let total =  price * item.quantity;
