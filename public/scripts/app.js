@@ -1,8 +1,8 @@
 // Client facing scripts here
 // add products to cart
-const cart_czount = require('./cart_count');
-
 // eslint-disable-next-line func-style
+
+
 function addToCartClicked(id, description, thumbnailUrl, price) {
   let cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -69,7 +69,7 @@ function renderCheckout() {
     </div></section>
     `;
     array.push(item);
-
+    console.log(array);
   });
   totalCheckout(array);
 }
@@ -80,8 +80,13 @@ function renderCheckout() {
 function totalCheckout(array) {
   let totalAmount =  0;
   let totalItems = 0;
-  array.forEach(item => {
+  let itemId = 0;
+  let itemdescription = 0;
+  console.log(array);
 
+  array.forEach(item => {
+    itemId = item.id;
+    itemdescription = item.description;
     let price = item.price.replace('$','');
     totalItems += item.quantity;
     let total =  price * item.quantity;
@@ -89,13 +94,16 @@ function totalCheckout(array) {
 
   });
   totalcontainer.innerHTML += `
+
   <section class="total-amount">
   <h2>Order Total</h2>
   <h5>Items ${totalItems}</h5>
   <h5>Amount $${totalAmount}</h5>
   <button class= "sendMessage btn btn-warning">Place order</button>
   </section>
+
  `;
 }
+
 // eslint-disable-next-line func-style
 
