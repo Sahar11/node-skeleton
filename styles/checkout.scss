@@ -1,12 +1,19 @@
 .head-picture {
-  width: 100%;
-  height: 300px;
+  background-image: url(https://www.mashed.com/img/gallery/youve-been-kneading-bread-all-wrong-this-whole-time/intro-1617387877.jpg);
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .order-status{
+  margin-top: 10px;
   text-align: center;
   color: #c28e00;
+  text-decoration: underline;
 }
+
+
 
 .quantity{
   margin-left: 5px;
@@ -19,5 +26,8 @@
 
  .total-amount {
   text-align: center;
-  
+ }
+
+ .sendMessage{
+   margin-bottom: 10px;
  }

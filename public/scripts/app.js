@@ -84,8 +84,8 @@ function totalCheckout(array) {
   <h5>Amount $${totalAmount}</h5>
   <button class= "sendMessage btn btn-warning">Place order</button>
   </section>
-
  `;
+  localStorage.clear();
 }
 
 

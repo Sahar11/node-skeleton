@@ -9,8 +9,8 @@ header > nav > ul {
 }
 
 #logo {
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
 }
 
 .logout, header > nav > ul > li {
@@ -27,9 +27,8 @@ header > nav > ul > li a {
 }
 
 li a:hover {
-  border-radius: 50%;
   background-color: transparent;
-  border: 1px solid black;
+  color: aliceblue;
 }
 
 #cartItems{
