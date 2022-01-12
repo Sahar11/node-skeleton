@@ -93,6 +93,7 @@ function totalCheckout(array) {
   <h2>Order Total</h2>
   <h5>Items ${totalItems}</h5>
   <h5>Amount $${totalAmount}</h5>
+  <button class= "sendMessage btn btn-warning">Place order</button>
   </section>
  `;
 }
