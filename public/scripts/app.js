@@ -1,6 +1,6 @@
 // Client facing scripts here
 // add products to cart
-const cart_czount = require('./cart_count');
+const cart_count = require('./cart_count');
 
 // eslint-disable-next-line func-style
 function addToCartClicked(id, description, thumbnailUrl, price) {
