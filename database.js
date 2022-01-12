@@ -18,4 +18,18 @@ const menu = () => {
    console.log(err.message);
  })
 }
-module.exports = { menu }
+exports.menu = menu;
+
+const orders = (orders) => {
+  const queryString = `INSERT INTO orders (users_id, total_price) VALUES (2, 2);`;
+  const queryParams = [orders.user_id, orders.total_price];
+  return pool.query(queryString, queryParams)
+  .then((res) => {
+    return Promise.resolve(res.rows[0]);
+   })
+  .catch((err) =>{
+    console.log(err.message);
+  })
+ }
+ exports.orders = orders;
+
