@@ -3,7 +3,7 @@
 // add products to cart
 // eslint-disable-next-line func-style
 
-
+// function for storing data from index to localstorage
 function addToCartClicked(id, description, thumbnailUrl, price) {
   let cart = JSON.parse(localStorage.getItem("cart"));
 
@@ -16,38 +16,28 @@ function addToCartClicked(id, description, thumbnailUrl, price) {
 
     cartItem.quantity++;
   } else {
-    cart.push({id, quantity: 1, description, thumbnailUrl, price});
+    cart.push({ id, quantity: 1, description, thumbnailUrl, price });
 
   }
   localStorage.setItem("cart", JSON.stringify(cart)
   );
 }
 
-// eslint-disable-next-line func-style
+// function for getting data from localstorage
 function getCart() {
   const cart = JSON.parse(localStorage.getItem("cart"));
   return cart;
 
 }
-
-//render id on the checkout
-
-// eslint-disable-next-line func-style
-
-
-// eslint-disable-next-line func-style
+//function for rendering data on our checkout page
 function renderCheckout() {
   const checkOutContainer = document.getElementById("checkout-container");
   const cart = getCart();
   const array = [];
   cart.forEach(item => {
-
     checkOutContainer.innerHTML += `
-
-
     <section> <div class="container menus">
       <div class="row">
-
         <div class="item col-sm-6">
           <section class="menu">
             <img class="thumbnail" src="${item.thumbnailUrl}" alt="" />
@@ -62,24 +52,17 @@ function renderCheckout() {
             </div>
             </div>
           </section>
-
         </div>
-
-
       </div>
     </div></section>
     `;
     array.push(item);
-    console.log(array);
   });
   totalCheckout(array);
 }
-
-// eslint-disable-next-line func-style
-
-// eslint-disable-next-line func-style
+// adding price and quantity and displaying on the checkout page
 function totalCheckout(array) {
-  let totalAmount =  0;
+  let totalAmount = 0;
   let totalItems = 0;
   let itemId = 0;
   let itemdescription = 0;
@@ -88,9 +71,9 @@ function totalCheckout(array) {
   array.forEach(item => {
     itemId = item.id;
     itemdescription = item.description;
-    let price = item.price.replace('$','');
+    let price = item.price.replace('$', '');
     totalItems += item.quantity;
-    let total =  price * item.quantity;
+    let total = price * item.quantity;
     totalAmount += total;
 
   });
@@ -102,9 +85,8 @@ function totalCheckout(array) {
   <h5>Amount $${totalAmount}</h5>
   <button class= "sendMessage btn btn-warning">Place order</button>
   </section>
-
  `;
+  localStorage.clear();
 }
 
-// eslint-disable-next-line func-style
 

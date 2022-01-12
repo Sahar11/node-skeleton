@@ -1,19 +1,33 @@
 <%- include('partials/_header') %>
 
 <body>
-<!-- img for header -->
-  <section>
- <img class="head-picture" src="/docs/head-picture.jpg" alt="pizza">
+  <!-- navbar -->
+  <header>
+    <nav>
+      <ul>
+        <li><img id="logo" src="https://cdn.discordapp.com/attachments/929080108004818974/930954448841342976/logo.png" alt="logo" /></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About us</a></li>
+
+        <li class="logout">
+          <a href="#">Hi Rosetta</a><a href="#">Logout</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<!-- Navbar ending -->
+  <section class="head-picture">
   </section>
 
   <div id="checkout-container">
-
-
     <section class="order-status">
       <h2>Order Status</h2>
-      <p>Your Order would be ready in: 20min</p>
+      <p class="status"></p>
       </section>
+     <hr>
   </div>
+
+  <hr>
   <div id="totalcontainer"></div>
 
   <script>renderCheckout()</script>
@@ -34,5 +48,11 @@
       </div>
     </footer>
   </section>
+  <script>
+    $(".sendMessage").click(function () {
+
+  $(".status").html("Your Order would be ready in: 20min");
+});
+  </script>
 </body>
 </html>

@@ -1,7 +1,6 @@
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS orders CASCADE;
 DROP TABLE IF EXISTS menus CASCADE;
-DROP TABLE IF EXISTS restaurants CASCADE;
 
 
 CREATE TABLE users (
@@ -26,12 +25,5 @@ CREATE TABLE menus (
   thumbnail_url VARCHAR(255),
   price money
 );
-
--- CREATE TABLE restaurants (
---   id SERIAL PRIMARY KEY NOT NULL,
---   name VARCHAR(255) NOT NULL,
-    --  menu_id INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE,
---   order_id INTEGER NOT NULL REFERENCES orders(id) ON DELETE CASCADE
--- );
 
 
