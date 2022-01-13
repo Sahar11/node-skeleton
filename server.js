@@ -58,8 +58,8 @@ app.get("/views/checkout", (req, res) => {
 app.post("/sendMessage", (req, res) => {
   twilio.messages.create({
     body: 'Thank you for placing the order. It will be ready for pick up in 20 minutes.',
-    from: '+19592155802',
-    to:   '+16472040540',
+    from: 'Twilio Number',
+    to:   'your number',
   })
 });
 
